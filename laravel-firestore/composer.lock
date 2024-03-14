@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e9bf75da441f49006c2a03e2a546dd4",
+    "content-hash": "dec9c67beb7de63022095c4b608b12d1",
     "packages": [
         {
             "name": "beste/clock",
@@ -939,6 +939,63 @@
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
             "support": {
                 "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.56.1"
+            },
+            "time": "2024-03-01T11:25:35+00:00"
+        },
+        {
+            "name": "google/cloud-firestore",
+            "version": "v1.41.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/googleapis/google-cloud-php-firestore.git",
+                "reference": "bad18c223678469126009dc933984820eb107fd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-firestore/zipball/bad18c223678469126009dc933984820eb107fd3",
+                "reference": "bad18c223678469126009dc933984820eb107fd3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-grpc": "*",
+                "google/cloud-core": "^1.52.7",
+                "google/gax": "^1.30",
+                "php": "^8.0",
+                "ramsey/uuid": "^3.0|^4.0"
+            },
+            "require-dev": {
+                "erusev/parsedown": "^1.6",
+                "phpdocumentor/reflection": "^5.3.3",
+                "phpdocumentor/reflection-docblock": "^5.3",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.0",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "suggest": {
+                "ext-protobuf": "Provides a significant increase in throughput over the pure PHP protobuf implementation. See https://cloud.google.com/php/grpc for installation instructions."
+            },
+            "type": "library",
+            "extra": {
+                "component": {
+                    "id": "cloud-firestore",
+                    "target": "googleapis/google-cloud-php-firestore.git",
+                    "path": "Firestore",
+                    "entry": "src/FirestoreClient.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Google\\Cloud\\Firestore\\": "src",
+                    "GPBMetadata\\Google\\Firestore\\": "metadata"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Cloud Firestore Client for PHP",
+            "support": {
+                "source": "https://github.com/googleapis/google-cloud-php-firestore/tree/v1.41.2"
             },
             "time": "2024-03-01T11:25:35+00:00"
         },
@@ -4458,6 +4515,48 @@
                 }
             ],
             "time": "2024-03-10T08:07:49+00:00"
+        },
+        {
+            "name": "svk/yc-grpc-injector",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/svk/yc-grpc-injector.git",
+                "reference": "727b71c551aaacc23b22e00e9f7caf82b00e626a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/svk%2Fyc-grpc-injector/repository/archive.zip?sha=727b71c551aaacc23b22e00e9f7caf82b00e626a",
+                "reference": "727b71c551aaacc23b22e00e9f7caf82b00e626a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "provide": {
+                "ext-grpc": "1.32.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "svk\\GRPCInjector\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "svk",
+                    "email": "svk@svk.su"
+                }
+            ],
+            "description": "Интеграция драйвера grpc для php 7.4.4 в Cloud Functions Яндекс.Облака",
+            "support": {
+                "issues": "https://gitlab.com/api/v4/projects/21838721/issues"
+            },
+            "time": "2020-10-17T10:01:49+00:00"
         },
         {
             "name": "symfony/cache",
